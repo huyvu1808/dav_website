@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <title>Checkout - DAV</title>
+    </head>
+    <body>
+        <nav class="navbar">
+            <img src="pictures/0dcfb34cf9253f7b6634.jpg" class="logo">
+            <div class="navbar_links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="locations.html">Locations</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="icons">
+                <a href="#"><img src="pictures/magnifying-glass-solid.svg" style="cursor: pointer;" class="search_box"></a>
+                <a href="registration.html"><img src="pictures/user-solid.svg" style="cursor: pointer;" class="user"></a>
+                <div class="items_counter">
+                    <a href="cart.html"><img src="pictures/cart-shopping-solid.svg" style="cursor: pointer;" class="order"></a>
+                    <div id="no_count" class="no_count">0</div>
+                </div>
+            </div>
+        </nav>
+        <div class="checkout">
+            <div class="your_order">
+                <p class="order_text">Your order</p>
+                <table class="checkout_table">
+                    <tr class="checkout_headers">
+                        <th class="product_head">Product</th>
+                        <th class="total_head">Total</th>
+                    </tr>
+                </table>
+                <table id="display_table">
+                    <tr id="shop_products">
+                        <td>
+
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+                <div id="total_products" class="total_items">
+            
+                </div>
+            </div>
+            <form id="regform" method="post" action="http://mercury.ict.swin.edu.au/it000000/formtest.php" >
+                <fieldset class="bill_content">
+                    <legend class="billing_detail">Billing details</legend>
+                    <div class="textinput" id="textinput7">
+                        <p class="code">Pay on:</p>
+                        <div class="ship">
+                            <div class="shipme">
+                                <label for="onl">Online</label>
+                                <input id="onl" type="radio" name="pay" value="O" onclick="Pay()" required="required">
+                            </div>
+                            <div class="shipme">
+                                <label for="pick">Pick-up</label>
+                                <input id="pick" type="radio" name="pay" value="P" onclick="Pay()" required="required">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="textinput" id="textinput1">
+                        <label for="sid10">First name*</label>
+                        <label for="sid20">Last name*</label>
+                        <input id="sid10" type="text" name="id" required="required"  >
+                        <input id="sid20" type="text" name="id" required="required"  >
+                    </div>
+                    <div class="textinput">
+                        <label for="contact">Contact number*</label><br>
+                        <input id="contact" type="text" name="contact" required="required" >
+                    </div>
+                    <div class="textinput">
+                        <label for="gmail1">Email for receipt*</label><br>
+                        <input id="gmail1" type="email" name="gmail" required="required">
+                    </div>
+                    <div class="textinput">
+                        <label for="zip">Postcode / ZIP*</label>
+                        <input id="zip" type="text" name="zip" required="required"  >
+                    </div>
+                    <div class="textinput" id="textinput2">
+                        <p class="code">Shipping methods:</p>
+                        <div class="ship">
+                            <div class="shipme">
+                                <label for="delivery">Delivery</label>
+                                <input id="delivery" type="radio" name="ship" value="D" onclick="Check()" required="required">
+                            </div>
+                            <div class="shipme">
+                                <label for="pickup">Pick-up</label>
+                                <input id="pickup" type="radio" name="ship" value="P" onclick="Check()" required="required">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="shipping_method">
+                        <div class="textinput">
+                            <label for="deli">Delivery address</label>
+                            <input id="deli" type="text" name="address" required="required" >
+                        </div>
+                        <div class="textinput">
+                            <label for="bill">Billing address</label>
+                            <input id="same" type="checkbox" name="same" onclick="addressFunction()" >
+                            <input id="bill" type="text" name="address" required="required"  >
+                        </div>
+                    </div>
+                    <div class="buttoninput" id="submitbut">
+                        <input type="submit" value="Submit" id="button">
+                    </div>
+                </fieldset>
+                <div class="payment">
+                    <fieldset id="payment_detail">
+                        <legend class="billing_detail">Payment</legend>
+                        <fieldset class="cards">
+                            <legend class="billing_sub">Accepted cards:</legend>
+                            <div class="acccards">
+                                <img src="pictures/paypal.jpg" class="cardname" alt="#">
+                                <img src="pictures/mastercard.png" class="cardname" onclick="Show()" alt="#">
+                                <img src="pictures/american_express.png" class="cardname" onclick="Show1()" alt="#">
+                                <img src="pictures/visa.png" class="cardname" onclick="Show()" alt="#">
+                            </div>
+                        </fieldset>
+                    </fieldset>
+                    <div id="cards_info">
+                        <div class="textinput" id="textinput">
+                            <label for="cardholder">Name on card*</label><br>
+                            <input id="cardholder" type="text" name="cardholder" required="required" placeholder="TRAN HUY VU">
+                        </div>
+                        <div class="cre">
+                            <div id="textinput4">
+                                <label for="creditcard1" id="cc">Credit card number*</label><br>
+                                <input id="creditcard1" type="text" name="creditcard1" required="required" placeholder="1111-2222-3333-444">
+                            </div>
+                            <div id="textinput5">
+                                <label for="creditcard" id="cc1">Credit card number*</label><br>
+                                <input id="creditcard" type="text" name="creditcard" required="required" placeholder="1111-2222-3333-4444">
+                            </div>
+                        </div>
+                        <div class="textinput" id="textinput8">
+                            <label for="month">EXP Month*</label><br>
+                            <input id="month" type="text" name="month" required="required" placeholder="November">
+                        </div>
+                        <div class="textinput" id="textinput9">
+                            <label for="year">EXP Year*</label><br>
+                            <input id="year" type="text" name="year" required="required" placeholder="2022">
+                        </div>
+                        <div class="textinput" id="textinput10">
+                            <label for="cvv">CVV*</label><br>
+                            <input id="cvv" type="text" name="cvv" required="required" placeholder="1234">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+    <script type="text/javascript" src="javascript/data.js"></script>
+    <script type="text/javascript" src="javascript/script3.js"></script>
+    <footer>
+        <div id="TA_footer1">
+            <div id="TA_explore">
+                <h1><span style="font-family:Rubik;color: white;">EXPLORE</span></h1>
+                <p><a href="index.html"><i class="fa-sharp fa-solid fa-angle-right"></i>Home</a></p>
+                <p><a href="about.html"><i class="fa-sharp fa-solid fa-angle-right"></i>About</a></p>
+                <p><a href="shop.html"><i class="fa-sharp fa-solid fa-angle-right"></i>Shop</a></p>
+                <p><a href="locations.html"><i class="fa-sharp fa-solid fa-angle-right"></i>Locations</a></p>
+                <p><a href="feedback.html"><i class="fa-sharp fa-solid fa-angle-right"></i>Feedback</a></p>
+                <p><a href="contact.html"><i class="fa-sharp fa-solid fa-angle-right"></i>Contact</a></p>
+            </div>
+            <div id="TA_overall">
+                <h1><span style="font-family:Rubik;color: white;">ABOUT</span></h1>
+                <p id="TA_overall_1"><a href="#">THE COMPANY</a></p>
+                <p><a href="#"><span style="margin-left:3.2rem;">FAQ</span></a></p>
+                <p id="TA_overall_3"><a href="#">PRIVACY POLICY</a></p>
+            </div>
+            <div id="TA_icons">
+                <h1><span style="font-family:Rubik;color:white;">FOLLOW US</span></h1>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+        <div id="TA_footer2">
+            <div class="row">
+                <p id="TA_footer_text0"><i class="fa-solid fa-copyright"></i>2022 DAV. ALL RIGHTS RESERVED.</p>
+                <img src="pictures/0dcfb34cf9253f7b6634.png" alt="logo">
+                <p id="TA_footer_text">Good to the last drop</p>
+            </div>
+        </div>
+    </footer>
+</html>

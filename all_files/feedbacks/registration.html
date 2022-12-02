@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="registration.css" rel="stylesheet" />
+    <link href="mod.css" rel="stylesheet" >
+    <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="registration.js"></script>
+    <title>Locations - DAV</title>
+  </head>
+
+  <nav class="navbar">
+    <img src="pictures/0dcfb34cf9253f7b6634.jpg" class="logo">
+    <div class="navbar_links">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><a href="locations.html">Locations</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <div class="icons">
+        <a href="#"><img src="pictures/magnifying-glass-solid.svg" style="cursor: pointer;" class="search_box"></a>
+        <a href="#"><img src="pictures/user-solid.svg" style="cursor: pointer;" class="user"></a>
+        <a href="#"><img src="pictures/cart-shopping-solid.svg" style="cursor: pointer;" class="order"></a>
+    </div>
+</nav>
+
+<body>
+    <div class="border">
+        <h1>Create an account</h1>
+        <h3>Complete the form below to sign up for our membership</h3>
+        <hr>
+        <br>
+        <h1 class="userin">User information</h1> <br>
+        <form action="/action_page.php" class="form" id="registration">
+            <label for="fname">First name: *</label>
+            <input class="textbox" type="text" id="fname" name="fname" size="33" ><br><br>
+
+            <label for="lname">Last name: *</label>
+            <input class="textbox" type="text" id="lname" name="lname" size="33" ><br><br>
+        </form>
+            
+        <div class="gender" id="registration">
+            <label for="">Gender: *</label>
+            <input class="rb" type="radio" id="genm" name="gender" style="height: 1.5em; width: 20px"> Male<br><br>
+            <label for="genf"></label>
+            <input class="rb" type="radio" id="genf" name="gender" style="height: 1.5em; width: 20px"> Female<br><br>
+            <label for="geno"></label>
+            <input class="rb" type="radio" id="geno" name="gender" style="height: 1.5em; width: 20px"> Others
+        </div>
+        <br>
+            
+        <form action="http://mercury.ict.swin.edu.au/it000000/formtest.php" method="post" class="form" id="registration">
+            <label for="email">Email: *</label>
+            <input class="textbox" type="text" id="email" name="email" size="33"><br><br>
+            
+            <label for="phone number">Phone number: *</label>
+            <input class="textbox" type="text" id="pn" name="pn" size="33"><br><br>
+        </form>
+        
+        <div class="gender" id="registration">
+            <label for="">Are you high: *</label>
+            <input class="rb" type="radio" id="genm" name="gender" style="height: 1.5em; width: 20px"> Yes<br><br>
+            <label for="genf"></label>
+            <input class="rb" type="radio" id="genf" name="gender" style="height: 1.5em; width: 20px"> No<br><br>
+            <label for="geno"></label>
+            <input class="rb" type="radio" id="geno" name="gender" style="height: 1.5em; width: 20px"> Prefers not to answer
+        </div>
+    
+
+        <form action="/action_page.php" class="form" id="registration">
+            <p>Address:</p>
+            
+            <label for="street">Street: *</label>
+            <input class="textbox" type="text" id="street" name="address" size="33"><br><br>
+        
+            
+            <!---<div class="address">
+                <input type="text" id="" name="" size="50"><br><br>
+                <input type="text" id="" name="" size="50"><br><br>
+                <input type="text" id="" name="" size="50"><br><br>
+            </div> --->
+            
+            <label for="city">City: *</label>
+            <input class="textbox" type="text" id="city" name="address" size="33" ><br><br>
+
+            <label for="state/province">State/Province: *</label>
+            <input class="textbox" type="text" id="sp" name="address" size="33"><br><br>
+
+            <label for="postal/zip code">Postal/Zip Code: *</label>
+            <input class="textbox" type="text" id="pzc" name="address" size="33"><br><br>
+
+            <label for="country">Country: *</label>
+            <select class="textbox" id="country" name="country" class="select">
+                <option value="AD">Andorra</option>
+                <option value="AR">Argentina</option>
+                <option value="AW">Aruba</option>
+                <option value="AU">Australia</option>
+                <option value="AT">Austria</option>
+                <option value="AZ">Azerbaijan</option>
+                <option value="BS">Bahamas</option>
+                <option value="BH">Bahrain</option>            
+                <option value="BE">Belgium</option>        
+                <option value="BO">Bolivia</option>           
+                <option value="BR">Brazil</option>          
+                <option value="BN">Brunei</option>
+                <option value="BG">Bulgaria</option>           
+                <option value="KH">Cambodia</option>           
+                <option value="CA">Canada</option>           
+                <option value="CL">Chile</option>
+                <option value="CN">China</option>           
+                <option value="CO">Colombia</option>           
+                <option value="CW">Curacao</option>
+                <option value="CY">Cyprus</option>
+                <option value="CZ">Czech Republic</option>
+                <option value="DK">Denmark</option>          
+                <option value="EG">Egypt</option>
+                <option value="SV">El Salvador</option>          
+                <option value="FI">Finland</option>
+                <option value="FR">France</option>           
+                <option value="DE">Germany</option>           
+                <option value="GR">Greece</option>           
+                <option value="GT">Guatemala</option>           
+                <option value="HK">Hong Kong</option>
+                <option value="HU">Hungary</option>           
+                <option value="IN">India</option>
+                <option value="ID">Indonesia</option>           
+                <option value="IE">Ireland</option>           
+                <option value="JP">Japan</option>
+                <option value="JA">Jamaica</option>
+                <option value="JO">Jordan</option>
+                <option value="KZ">Kazakhstan</option>            
+                <option value="KW">Kuwait</option>            
+                <option value="LB">Lebanon</option>      
+                <option value="LU">Luxembourg</option>            
+                <option value="MY">Malaysia</option>            
+                <option value="MX">Mexico</option>           
+                <option value="MC">Monaco</option>           
+                <option value="MA">Morocco</option>            
+                <option value="NL">Netherlands</option>           
+                <option value="NZ">New Zealand</option>           
+                <option value="NO">Norway</option>
+                <option value="OM">Oman</option>            
+                <option value="PA">Panama</option>           
+                <option value="PE">Peru</option>
+                <option value="PH">Philippines</option>            
+                <option value="PT">Portugal</option>
+                <option value="PR">Puerto Rico</option>
+                <option value="QA">Qatar</option>           
+                <option value="RO">Romania</option>
+                <option value="RU">Russia</option>            
+                <option value="SA">Saudi Arabia</option>           
+                <option value="SG">Singapore</option>           
+                <option value="SK">Slovakia</option>           
+                <option value="ZA">South Africa</option>           
+                <option value="SS">South Korea</option>
+                <option value="ES">Spain</option>           
+                <option value="SE">Sweden</option>
+                <option value="CH">Switzerland</option>           
+                <option value="TW">Taiwan</option>           
+                <option value="TH">Thailand</option>           
+                <option value="TT">Trinidad</option>           
+                <option value="TR">Turkey</option>           
+                <option value="AE">United Arab Emirates</option>
+                <option value="GB">United Kingdom</option>
+                <option value="US">United States</option>           
+                <option value="UY">Uruguay</option>            
+                <option value="VN">Viet Nam</option>          
+            </select> <br><br>
+            
+            <h1 class="accin">Account information</h1><br>
+
+            <label for="id">User ID: *</label>
+            <input class="textbox" type="text" id="sid" name="id" size="33"><br><br>
+
+            <label for="pwd1">Password: *</label>
+            <input class="textbox" type="password" id="pwd1" name="pwd1" size="33"><br><br>
+
+            <label for="pwd2">Retype password: *</label>
+            <input class="textbox" type="password" id="pwd2" name="pwd2" size="33"><br><br>
+            
+            <input class="submit" type="submit" value="Register">
+        </form>
+    </div>
+</body>
+   

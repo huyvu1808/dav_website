@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <link rel="stylesheet" href="styles.css">
+        <title>Shop - DAV</title>
+    </head>
+    <body>
+        <nav class="navbar">
+            <img src="pictures/0dcfb34cf9253f7b6634.jpg" class="logo">
+            <div class="navbar_links">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="locations.html">Locations</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="icons">
+                <a href="#"><img src="pictures/magnifying-glass-solid.svg" style="cursor: pointer;" class="search_box"></a>
+                <a href="registration.html"><img src="pictures/user-solid.svg" style="cursor: pointer;" class="user"></a>
+                <div class="items_counter">
+                    <a href="cart.html"><img src="pictures/cart-shopping-solid.svg" style="cursor: pointer;" class="order"></a>
+                    <div id="no_count" class="no_count">0</div>
+                </div>
+            </div>
+        </nav>
+        <div class="products_sidebar">
+            <div class="category">Categories
+                <hr>
+                <ul class="category_list">
+                    <li class="list" data-filter="all"><small>&#62; &#160;</small>Show All</li>
+                    <li class="list" data-filter="green"><small>&#62; &#160;</small>Green Coffee</li>
+                    <li class="list" data-filter="italian"><small>&#62; &#160;</small>Italian Coffee</li>
+                    <li class="list" data-filter="roasted"><small>&#62; &#160;</small>Roasted Coffee</li>
+                </ul>
+            </div>
+            <div class="category">Tags
+                <hr>
+                <div class="tag">#arabica, #robusta, #moka, #latte, #catimor, #cherry, #culi, #espresso, #typica, #DAV, #DAV Coffee, #One Love
+                </div>
+            </div>
+        </div>
+        <div class="filter_condition">
+            <select name="" id="select">
+                <option value="Default">Default</option>
+                <option value="LowToHigh">Sort by price: low to high</option>
+                <option value="HighToLow">Sort by price: high to low</option>
+            </select>
+        </div>
+        <div class="all_products" id="shop">
+                <div class="products green">
+                    <img src="pictures/arabica.png" style="cursor: pointer;" class="product_pic">
+                    <p class="product_text">Arabica Coffee</p>
+                    <p class="product_price" data-price="20">$20.00</p>
+                    <div class="quantity_change">
+                        <i class="fa-solid fa-minus"></i>
+                        <div class="quantity">0</div>
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                </div>
+                <div class="products" >
+                </div>
+                <div class="products" >
+                </div>
+                <div class="products" >
+                </div>
+                <div class="products" >
+                </div>
+                <div class="products" >
+                </div>
+                <div class="products" >
+                </div>
+                <div class="products" >
+                </div>
+                <div class="products" >
+                </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="javascript/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="javascript/data.js"></script>
+    <script type="text/javascript" src="javascript/script.js"></script>
+    <footer>
+        <div id="TA_footer1">
+            <div id="TA_explore">
+                <h1><span style="font-family:Rubik;color: white;">EXPLORE</span></h1>
+                <p><a href="index.html"><i class="fa-sharp fa-solid fa-angle-right"></i>Home</a></p>
+                <p><a href="about.html"><i class="fa-sharp fa-solid fa-angle-right"></i>About</a></p>
+                <p><a href="shop.html"><i class="fa-sharp fa-solid fa-angle-right"></i>Shop</a></p>
+                <p><a href="locations.html"><i class="fa-sharp fa-solid fa-angle-right"></i>Locations</a></p>
+                <p><a href="feedback.html"><i class="fa-sharp fa-solid fa-angle-right"></i>Feedback</a></p>
+                <p><a href="contact.html"><i class="fa-sharp fa-solid fa-angle-right"></i>Contact</a></p>
+            </div>
+            <div id="TA_overall">
+                <h1><span style="font-family:Rubik;color: white;">ABOUT</span></h1>
+                <p id="TA_overall_1"><a href="#">THE COMPANY</a></p>
+                <p><a href="#"><span style="margin-left:3.2rem;">FAQ</span></a></p>
+                <p id="TA_overall_3"><a href="#">PRIVACY POLICY</a></p>
+            </div>
+            <div id="TA_icons">
+                <h1><span style="font-family:Rubik;color:white;">FOLLOW US</span></h1>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+        <div id="TA_footer2">
+            <div class="row">
+                <p id="TA_footer_text0"><i class="fa-solid fa-copyright"></i>2022 DAV. ALL RIGHTS RESERVED.</p>
+                <img src="pictures/0dcfb34cf9253f7b6634.png" alt="logo">
+                <p id="TA_footer_text">Good to the last drop</p>
+            </div>
+        </div>
+    </footer>
+</html>
